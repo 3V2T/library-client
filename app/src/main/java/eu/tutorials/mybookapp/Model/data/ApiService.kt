@@ -20,11 +20,11 @@ data class Server(
     val port: String
 ) {
     companion object {
-        const val DEFAULT_PORT = "172.28.176.1:5000"
+        const val DEFAULT_PORT = "lapi.ayclqt.id.vn"
     }
 }
 
-private val retrofit = Retrofit.Builder().baseUrl("http://${Server.DEFAULT_PORT}/api/v1/")
+private val retrofit = Retrofit.Builder().baseUrl("https://${Server.DEFAULT_PORT}/api/v1/")
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 
